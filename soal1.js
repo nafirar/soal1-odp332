@@ -2,10 +2,32 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 let resultOne
 
+function sumEvenNumber(numbers){
+    resultOne = 0
+    numbers.forEach((el)=>{
+        if (el % 2 === 0){
+            resultOne = resultOne + el
+        }
+    })
+    return resultOne
+}
+console.log(sumEvenNumber(numbers))
+
 
 const numbersTwo = [1, 2, 3, 4, 5, 6, 7, 8];
 //Tambahkan semua angka ganjil dalam array dan kembalikan hasilnya.
 let resultTwo
+
+function sumOddNumber(numbers){
+    resultTwo = 0
+    numbers.forEach((el)=>{
+        if(el % 2 !== 0){
+            resultTwo = resultTwo + el
+        }
+    })
+    return resultTwo
+}
+console.log(sumOddNumber(numbersTwo))
 
 
 // Ubah semua huruf kecil dalam array menjadi huruf besar
