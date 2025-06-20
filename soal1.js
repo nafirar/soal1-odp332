@@ -2,10 +2,10 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 let resultOne
 
-function sumEvenNumber(numbers){
+function sumEvenNumber(numbers) {
     resultOne = 0
-    numbers.forEach((el)=>{
-        if (el % 2 === 0){
+    numbers.forEach((el) => {
+        if (el % 2 === 0) {
             resultOne = resultOne + el
         }
     })
@@ -18,10 +18,10 @@ const numbersTwo = [1, 2, 3, 4, 5, 6, 7, 8];
 //Tambahkan semua angka ganjil dalam array dan kembalikan hasilnya.
 let resultTwo
 
-function sumOddNumber(numbers){
+function sumOddNumber(numbers) {
     resultTwo = 0
-    numbers.forEach((el)=>{
-        if(el % 2 !== 0){
+    numbers.forEach((el) => {
+        if (el % 2 !== 0) {
             resultTwo = resultTwo + el
         }
     })
@@ -34,6 +34,15 @@ console.log(sumOddNumber(numbersTwo))
 let students = ["Tito", "arY", "Bostang"]
 let resultThree
 
+function changeCapital(students) {
+    resultThree = []
+    students.forEach((el) => {
+        resultThree.push(el.toUpperCase())
+    })
+    return resultThree
+}
+console.log(changeCapital(students))
+
 
 // Ambil hanya nama-nama orang yang umurnya di atas 18 tahun.
 // Ambil hanya orang yang panjang namanya lebih dari 5
@@ -44,6 +53,18 @@ const people = [
     { name: 'Cici', age: 17 }
 ];
 
+function pilihOrang(people) {
+    let orangTerpilih = []
+    people.forEach((obj) => {
+        if (obj.age > 18) {
+            if (obj.name.length > 5) {
+                orangTerpilih.push(obj)
+            }
+        }
+    })
+    return orangTerpilih
+}
+console.log(pilihOrang(people))
 
 // Hitung total harga semua barang
 const items = [
@@ -51,7 +72,11 @@ const items = [
     { name: 'Pen', price: 5000 },
     { name: 'Pencil', price: 3000 },
 ];
-  
+
+function hitungHarga(){
+    
+}
+
 
 //Ambil hanya angka unik dari array (hapus duplikat).
 const numbersThree = [1, 2, 2, 3, 4, 4, 5];
