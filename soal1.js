@@ -73,14 +73,26 @@ const items = [
     { name: 'Pencil', price: 3000 },
 ];
 
-function hitungHarga(){
-    
+function hitungHarga(items){
+    let totalHarga = 0
+    items.forEach((obj)=>{
+        totalHarga = totalHarga + obj.price
+    })
+    return totalHarga
 }
+console.log(hitungHarga(items))
 
 
 //Ambil hanya angka unik dari array (hapus duplikat).
 const numbersThree = [1, 2, 2, 3, 4, 4, 5];
+function uniqueNumber(numbers){
+    let unique = []
+    numbers.forEach((el, idx)=>{
+        let isDuplicate = false
+        for 
 
+    })
+}
 
 // Ambil nama produk dengan harga tertinggi
 const products = [
