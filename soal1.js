@@ -110,18 +110,58 @@ const products = [
     { name: 'Phone', price: 8000000 },
     { name: 'Monitor', price: 3000000 },
 ];
+function maxHarga(products){
+    let maxPrice = 0
+    let maxProduk = ""
+    products.forEach((obj)=>{
+        if(obj.price > maxPrice){
+            maxPrice = obj.price
+            maxProduk = obj.name
+        }
+    })
+    return maxProduk
+}
+console.log(maxHarga(products))
 
 
 // Buat kalimat dari array kata.
 const words = ['Belajar', 'array', 'itu', 'menyenangkan'];
-
+function buatKata(words){
+    let kalimat = ""
+    words.forEach((el)=>{
+        kalimat = kalimat + el + " "
+    })
+    return kalimat
+}
+console.log(buatKata(words))
 
 // Ambil hanya 3 data pertama yang mengandung kata 'a' pada nama.
 const names = ['Aldo', 'Budi', 'Caca', 'Dinda', 'Eka', 'Fajar'];
 
+function findAWord(names){
+    let newName = []
+    names.forEach((el)=>{
+        if(el.toLowerCase().includes('a') && newName.length < 3){
+            newName.push(el)
+        }
+    })
+    return newName
+}
+console.log(findAWord(names))
+
 
 // Hitung total karakter dari semua nama dalam array.
 const namesTwo = ['Ani', 'Budi', 'Citra']; // 12 karakter
+function countChar(namesTwo){
+    let countNameChar = ""
+    namesTwo.forEach((el)=>{
+        countNameChar = countNameChar+el.toLowerCase()
+        
+    })
+    return countNameChar.length
+}
+console.log(countChar(namesTwo))
+
 
 
 // Output: ['Tono (22)', 'Tara (25)']
@@ -132,3 +172,14 @@ const peopleTwo = [
     { name: 'Tara', age: 25 },
 ];
 
+function aryToStr(peopleTwo){
+    let newArray =[]
+    peopleTwo.forEach((obj)=>{
+        if(obj.age > 21){
+            let newFormat = `${obj.name} (${obj.age})`
+            newArray.push(newFormat)
+        }
+    })
+    return newArray
+}
+console.log(aryToStr(peopleTwo))
