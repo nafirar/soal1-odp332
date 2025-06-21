@@ -31,7 +31,7 @@ console.log(checkOddEven("enam")); // invalid input
  */
 
 function checkMature(usia) {
-    if (typeof usia !== "number" || usia < 0 ) {
+    if (typeof usia !== "number" || usia < 0) {
         return "Invalid Input"
     }
     else {
@@ -102,7 +102,7 @@ function loopCheckOddEven(number) {
         console.log("Invalid Input")
     }
     else {
-        for(i = 1; i <= number ; i++){
+        for (i = 1; i <= number; i++) {
             if (i % 2 === 0) {
                 console.log(i + " => Bilangan Genap")
             }
@@ -111,7 +111,7 @@ function loopCheckOddEven(number) {
             }
         }
     }
-    
+
 }
 
 loopCheckOddEven(5)
@@ -131,14 +131,14 @@ loopCheckOddEven("lima") // invalid input
  */
 
 function totalValue(inputNumber) {
-    if (typeof inputNumber === "number"){
+    if (typeof inputNumber === "number") {
         let totalNumber = 0
-        for (let index = 1; index <=inputNumber;  index++){
+        for (let index = 1; index <= inputNumber; index++) {
             totalNumber = totalNumber + index
         }
-        console.log(totalNumber)
-    }else {
-        console.log("Invalid Number")
+        return totalNumber
+    } else {
+        return "Invalid Number"
     }
 
 }
@@ -148,14 +148,21 @@ console.log(totalValue("empat")); // invalid input
 
 
 
-/**
+/**  
  * Menghitung huruf vokal
  * 
  * Buat program yang menerima sebuah string, lalu hitung berapa banyak huruf vokal (a, e, i, o, u) di dalam string tersebut. Gunakan function untuk mengembalikan value total jumlah huruf vocal
  */
 
-function checkVowels() {
-
+function checkVowels(kalimat) {
+    let count = 0
+    let karakter = kalimat.toLowerCase().replace(/\s/g, "").split("")
+    for (i = 0; i < karakter.length; i++) {
+        if (karakter[i] == 'a' || karakter[i] == 'i' || karakter[i] == 'u' || karakter[i] == 'e' || karakter[i] == 'o') {
+            count++
+        }
+    }
+    return count
 }
 
 console.log(checkVowels("I Love JavaScript")); // 6
@@ -178,6 +185,14 @@ console.log(checkVowels("mie ayam")); //4
 
 function checkVowelConsonant(char) {
     // code di scope ini yaa
+    let lowerChar = char.toLowerCase()
+    if (lowerChar === 'a' || lowerChar === 'i' || lowerChar === 'u' || lowerChar === 'e' || lowerChar === 'o') {
+        return "Vokal"
+    } else if (lowerChar >= 'a' && lowerChar <= 'z') {
+        return "Konsonan"
+    } else {
+        return "Bukan alfabet"
+    }
 }
 
 console.log(checkVowelConsonant('A')); // Output: "Vokal"
@@ -200,6 +215,13 @@ console.log(checkVowelConsonant('a')); // Output: "Vokal"
 
 function canVote(age) {
     // code di scope ini yaa
+    let eligible = false;
+    if (age >= 18) {
+        eligible = true
+        return eligible
+    } else {
+        return eligible
+    }
 }
 
 console.log(canVote(20)); // true
@@ -229,6 +251,23 @@ console.log(canVote(17)); // false
 
 function getDayName(dayNumber) {
     // code disini
+    if (dayNumber === 1)
+        return "Senin"
+    else if (dayNumber === 2)
+        return "Selasa"
+    else if (dayNumber === 3)
+        return "Rabu"
+    else if (dayNumber === 4)
+        return "Kamis"
+    else if (dayNumber === 5)
+        return "Jumat"
+    else if (dayNumber === 6)
+        return "Sabtu"
+    else if (dayNumber === 7)
+        return "Minggu"
+    else {
+        return "Nomor hari tidak valid"
+    }
 }
 
 console.log(getDayName(1)); // Output: "Senin"
