@@ -89,10 +89,20 @@ function uniqueNumber(numbers){
     let unique = []
     numbers.forEach((el, idx)=>{
         let isDuplicate = false
-        for 
+        for (let i=0; i<idx;i++){
+            if(numbers[i] === el){
+                isDuplicate=true
+                break;
+            }
+        }
+        if(!isDuplicate){
+            unique.push(el)
+        }
 
     })
+    return unique
 }
+console.log(uniqueNumber(numbersThree))
 
 // Ambil nama produk dengan harga tertinggi
 const products = [
