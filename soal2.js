@@ -309,7 +309,15 @@ console.log(reverseArray(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
  */
 
 const isPalindrome = (inputUser) => {
-
+    let palindrome = false
+    let trimKalimat = inputUser.replace(/\s/g,"").split("")
+    let reverseKalimat = trimKalimat.slice().reverse()
+    if(trimKalimat.join("") === reverseKalimat.join("")){
+        palindrome = true
+        return palindrome
+    } else {
+        return palindrome
+    }
 }
 
 console.log(isPalindrome("kasur rusak")); // true
