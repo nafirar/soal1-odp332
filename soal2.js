@@ -63,8 +63,22 @@ console.log(checkMature(-1)); // invalid input
  * Gunakan if-else dan function yang mengembalikan string
  */
 
-function scoreReport() {
-
+function scoreReport(grade) {
+    if (typeof grade != "number" || (grade > 100 || grade < 0))
+        return "Invalid Input"
+    else {
+        if (grade < 60)
+            return "E"
+        else if (grade < 70)
+            return "D"
+        else if (grade < 80)
+            return "C"
+        else if (grade < 90)
+            return "B"
+        else {
+            return "A"
+        }
+    }
 }
 
 console.log(scoreReport(90)); // A
@@ -83,8 +97,21 @@ console.log(scoreReport("sembilan puluh")); // invalid input
  * Buat program yang menampilkan semua bilangan ganjil dari 1 sampai 20 menggunakan for loop
  */
 
-function loopCheckOddEven() {
-
+function loopCheckOddEven(number) {
+    if (typeof number !== "number") {
+        console.log("Invalid Input")
+    }
+    else {
+        for(i = 1; i <= number ; i++){
+            if (i % 2 === 0) {
+                console.log(i + " => Bilangan Genap")
+            }
+            else {
+                console.log(i + " => Bilangan Ganjil")
+            }
+        }
+    }
+    
 }
 
 loopCheckOddEven(5)
