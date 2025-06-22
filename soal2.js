@@ -97,18 +97,18 @@ console.log(scoreReport("sembilan puluh")); // invalid input
  * Buat program yang menampilkan semua bilangan ganjil dari 1 sampai 20 menggunakan for loop
  */
 
-function loopCheckOddEven(number) {
+function loopCheckOddEven(number=20) {
     if (typeof number !== "number") {
         console.log("Invalid Input")
     }
     else {
         for (i = 1; i <= number; i++) {
-            if (i % 2 === 0) {
-                console.log(i + " => Bilangan Genap")
-            }
-            else {
+            if (i % 2 !== 0) {
                 console.log(i + " => Bilangan Ganjil")
             }
+            // else {
+            //     console.log(i + " => Bilangan Ganjil")
+            // }
         }
     }
 
